@@ -265,3 +265,40 @@
   265  mkdir 01-GitHub
   266  ls
   267  history > 01-GitHub/History.txt
+  268  ls
+  269  git commit -am "01-GitHub" ; git push 
+  270  git add . 
+  271  git commit -am "01-GitHub" ; git push 
+  272  git config --list
+  273  cd 
+  274  git clone https://github.com/amitvashisttech/docker-k8s-vmware-17-Jan-2022.git
+  275  ls
+  276  cd docker-k8s-vmware-17-Jan-2022/
+  277  ls
+  278  ls a 
+  279  ls -a
+  280  cd ..
+  281  ls
+  282  rm -rf docker-k8s-vmware-17-Jan-2022/
+  283  ls
+  284  cd devops-m-benz-27-Jan-2022/
+  285  s
+  286  ls
+  287  mkdir .terraform
+  288  ls
+  289  ls -a 
+  290  cp -rf README.md .terraform/
+  291  cp -rf README.md amit.tfstate
+  292  ls
+  293  ls -a .terraform/
+  294  ls
+  295  vim .gitignore
+  296  ls
+  297  git status 
+  298  mv .gitignore /root/
+  299  git status 
+  300  mv /root/.gitignore . 
+  301  git status 
+  302  git add . ; git commit -m "Git Ignore" ; git push 
+  303  ls
+  304  history > 01-GitHub/History.txt 
