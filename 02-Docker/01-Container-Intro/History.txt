@@ -1,0 +1,31 @@
+    1  ls
+    2  docker version 
+    3  docker images 
+    4  docker container ls 
+    5  docker container ls -a 
+    6  docker run busybox echo "Welcome to the world of docker."
+    7  docker images 
+    8  docker container ls 
+    9  docker container ls -a 
+   10  docker images 
+   11  docker container ls 
+   12  docker container ls -a 
+   13  docker run busybox echo "Welcome to the world of docker."
+   14  docker container ls -a 
+   15  docker run busybox echo "Welcome to the world of docker."
+   16  docker container ls -a 
+   17  docker run busybox echo "Hello World" 
+   18  docker container ls -a 
+   19* docker 
+   20  docker container ls -a 
+   21  docker container ls -a
+   22  docker container ls -aq
+   23  docker rm $(docker container ls -aq) 
+   24  docker container ls -a
+   25  s
+   26  ls
+   27  cd 02-Docker/
+   28  ls
+   29  mkdir 01-Container-Intro
+   30  ls
+   31  history > 01-Container-Intro/History.txt 
