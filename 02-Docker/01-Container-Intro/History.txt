@@ -29,3 +29,74 @@
    29  mkdir 01-Container-Intro
    30  ls
    31  history > 01-Container-Intro/History.txt 
+   32  ls
+   33  cd ..
+   34  ls
+   35  rm -rf amit.tfstate Hello.txt 
+   36  ls
+   37  git add . ; git commit -m "01-Container-Intro/History.txt" ; git push 
+   38  ls
+   39  echo  "************** Demo 2 *************** Docker Hub ******************"
+   40  docker images 
+   41  docker pull nginx 
+   42  docker images 
+   43  docker pull ubuntu:16.04 
+   44  docker images 
+   45  docker pull amitvashist7/mypython-web-app-vmware-17-dec-2021:v1 
+   46  docker ps 
+   47  docker images 
+   48  docker pull amitvashist7/mypython-web-app-vmware-17-dec-2021:v2 
+   49  docker images 
+   50  docker pull amitvashist7/apache-ex4
+   51  docker login 
+   52  docker pull amitvashist7/apache-ex4
+   53  docker ps 
+   54  docker images 
+   55  docker ps 
+   56  docker ps -a 
+   57  docker container ls 
+   58  docker run busybox echo "Hello World" 
+   59  docker ps 
+   60  docker ps -a 
+   61  docker run busybox echo "Hello World" 
+   62  docker ps -a 
+   63  docker run --name test-1 busybox echo "Hello World" 
+   64  docker ps -a 
+   65  ls
+   66  ls -ltr 
+   67  docker ps 
+   68  docker run -it --name test-ubuntu-1 ubuntu:16.04 
+   69  ls
+   70  docker ps 
+   71  docker ps -a 
+   72  docker run -it --name test-ubuntu-1 ubuntu:16.04 
+   73  docker run -it --name test-ubuntu-2 ubuntu:16.04 
+   74  docker ps 
+   75  docker run -itd --name test-ubuntu-3 ubuntu:16.04 
+   76  docker ps 
+   77  docker ps -a 
+   78  docker ps 
+   79  docker stop test-ubuntu-3
+   80  docker ps 
+   81  docker ps -a 
+   82  docker start test-ubuntu-1
+   83  docker ps 
+   84  docker attach test-ubuntu-1
+   85  docker ps 
+   86  docker attach test-ubuntu-1
+   87  docker ps 
+   88  docker images 
+   89  docker run -d --name test-nginx-1 nginx 
+   90  docker ps 
+   91  docker kill test-nginx-1
+   92  docker ps -a 
+   93  docker ps 
+   94  docker kill $(docker ps -q) 
+   95  docker rm  $(docker ps -qa) 
+   96  docker ps -a 
+   97  ls
+   98  cd 02-Docker/
+   99  ls
+  100  cd 01-Container-Intro/
+  101  ls
+  102  history > History.txt 
