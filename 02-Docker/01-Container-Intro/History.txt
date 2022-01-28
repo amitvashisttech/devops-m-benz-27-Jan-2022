@@ -100,3 +100,66 @@
   100  cd 01-Container-Intro/
   101  ls
   102  history > History.txt 
+  103  ls
+  104  cat History.txt 
+  105  ls
+  106  cd ..
+  107  ls
+  108  cd ..
+  109  ls
+  110  git add . ; git commit -m "01-Container-Intro/History.txt" ; git push 
+  111  ls
+  112  docker ps 
+  113  docker ps -a 
+  114  docker run -d --name test-nginx-1 nginx 
+  115  docker ps 
+  116  docker inspect ce4d36e2f75d
+  117  docker ps 
+  118  curl 172.17.0.2:80 
+  119  ip addr 
+  120  ping google.com 
+  121* route -n
+  122  ip addr 
+  123  docker inspect ce4d36e2f75d
+  124  docker run -d --name test-nginx-2 nginx 
+  125  docker run -d --name test-nginx-3 nginx 
+  126  docker ps 
+  127  docker inspect test-nginx-1
+  128  docker inspect test-nginx-2
+  129  docker inspect test-nginx-3
+  130  curl 172.17.0.4 
+  131  ip addr 
+  132  docker ps 
+  133  netstat -tulnp 
+  134  docker run -d --name test-nginx-4 -p 8080:80 nginx 
+  135  docker ps 
+  136  netstat -tulnp 
+  137  systemctl  status docker 
+  138  docker inspect test-nginx-4
+  139  systemctl  status docker 
+  140  netstat -tulnp 
+  141  ip addr 
+  142  curl 172.17.0.5 
+  143  ls
+  144  docker ps 
+  145  docker images 
+  146  docker run -d --name test-1 -P amitvashist7/mypython-web-app-vmware-17-dec-2021:v2
+  147  docker ps 
+  148  netstat -tulnp 
+  149  systemctl  status docker 
+  150  docker run -d --name test-2 -P amitvashist7/mypython-web-app-vmware-17-dec-2021:v4
+  151  systemctl  status docker 
+  152  docker ps 
+  153  docker inspect 8d6d5c708082
+  154  ls
+  155  docker ps
+  156  ls
+  157  cd ..
+  158  ls
+  159  cd devops-m-benz-27-Jan-2022/
+  160  ls
+  161  cd 02-Docker/
+  162  ls
+  163  cd 01-Container-Intro/
+  164  ls
+  165  history > History.txt 
