@@ -1,0 +1,267 @@
+    1  ls
+    2  git --version 
+    3  ls
+    4  mkdir  myfirstproject 
+    5  ls
+    6  cd myfirstproject/
+    7  ls
+    8  pwd
+    9  ls
+   10  git status 
+   11  ls -a 
+   12  git init 
+   13  ls -a 
+   14  git status 
+   15  git config --global -list 
+   16  git config --global --list 
+   17  git config --global user.name "Amit Vashist"
+   18  git config --global user.email "amitvashist7@outlook.com" 
+   19  git config --global --list 
+   20  git config --global core.editor vi 
+   21  git config --global help.autocorrect 1
+   22  git config --global --list 
+   23  ls
+   24  echo "Hello World" > README.txt 
+   25  ls
+   26  cat README.txt 
+   27  vi README.txt 
+   28  cat README.txt 
+   29  echo "Hello World" > README.txt 
+   30  l
+   31  cat README.txt 
+   32  echo "Hello World - 2 " >>  README.txt 
+   33  cat README.txt 
+   34  ls
+   35  echo "Hello World" >  README.txt 
+   36  cat README.txt 
+   37  git status 
+   38  git add README.txt
+   39  git status 
+   40  git commit -m "Added a new Readme file for testing" 
+   41  git status 
+   42  ls
+   43  git log 
+   44  cat README.txt 
+   45  echo "Welcome to the world of Git" >> README.txt 
+   46  cat README.txt 
+   47  git status 
+   48  ls
+   49  echo "Git Testing - Test 1"  > Hello.txt
+   50  ls
+   51  git status 
+   52  git add .
+   53  git status 
+   54  git commit -m "Test - Modifed File, along with newfile" 
+   55  git status 
+   56  git log 
+   57  history 
+   58  ls
+   59  echo "Apple Pie" | git hash-object --stdin 
+   60  echo "Apple PiE" | git hash-object --stdin 
+   61  echo "Apple Pie" | git hash-object --stdin 
+   62  echo "Apple Pie" | git hash-object --stdin -w 
+   63  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -t 
+   64  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p 
+   65  ls -a 
+   66  cd .git/
+   67  ls
+   68  cd objects/
+   69  ls
+   70  ls -ltr 23/991897e13e47ed0adb91a0082c31c82fe0cbe5 
+   71  ls
+   72  cd ..
+   73  ls
+   74  cd ..
+   75  ls
+   76  git log 
+   77  git diff 231cc1..16ab51
+   78  ls
+   79  cat README.txt 
+   80  echo "Testing Update - 1" >> README.txt 
+   81  git add . ; git commit -m "Test -1"  
+   82  git logs 
+   83  echo "Testing Update - 2" >> README.txt 
+   84  git add . ; git commit -m "Test -2"  
+   85  git logs 
+   86  git diff 17d4e5..32859e
+   87  git diff 32859e..17d4e5
+   88  history 
+   89  ls
+   90  ls 
+   91  rm -rf Hello.txt 
+   92  ls
+   93  git status 
+   94  git add . ; git commit -m "Removed file - Hello.txt" 
+   95  git log 
+   96  git logs a04750c..17d4e5a
+   97  git diff a04750c..17d4e5a
+   98  ls
+   99  echo  "1" > amit.txt 
+  100  echo  "1" > test.txt
+  101  ls
+  102  git add . 
+  103  git status 
+  104  git unstage test.txt
+  105  git reset HEAD test.txt
+  106  git status 
+  107  git commit -m "New file - amit.txt" 
+  108  git status 
+  109  git logs 
+  110  git diff HEAD~1
+  111  git branch 
+  112  git show HEAD 
+  113  cat .git/HEAD 
+  114  cat .git/refs/heads/master
+  115  git log 
+  116  git branch 
+  117  git branch uat
+  118  git branch 
+  119  git branch testing 
+  120  git branch production 
+  121  git branch 
+  122  git branch -r production
+  123  git -r production
+  124  git branch 
+  125  git branch --help
+  126  git branch 
+  127  git branch rm production
+  128  git branch 
+  129  git branch --help
+  130  git branch -d rm
+  131  git branch -d production 
+  132  git branch 
+  133  git checkout uat 
+  134  git branch 
+  135  git log 
+  136  echo "Welcome to UAT Branch" > UAT.txt 
+  137  cat UAT.txt 
+  138  git add . ; git commit -m "First Commit in UAT Branch" 
+  139  git log
+  140  git show HEAD 
+  141  ls
+  142  cat .git/HEAD 
+  143  cat .git/refs/heads/uat
+  144  ls
+  145  git branch 
+  146  git checkout master
+  147  git branch 
+  148  git show HEAD 
+  149  cat .git/HEAD 
+  150  cat .git/refs/heads/master 
+  151  git branch 
+  152  git checkout testing 
+  153  ls
+  154  echo "Welcome to Testing Branch" > Testing.txt 
+  155  git add . ; git commit -m "First Commit in Testing Branch" 
+  156  git logs 
+  157  git checkout master 
+  158  git logs 
+  159  git logs --oneline 
+  160  git logs --oneline --graph 
+  161  git checkout testing 
+  162  git logs --oneline 
+  163  git logs --oneline --graph 
+  164  history 
+  165  ls
+  166  git branch 
+  167  git checkout master 
+  168  ls
+  169  echo "Welcome to Master Branch" > Master.txt 
+  170  git add . ; git commit -m "New file Master.txt in Master Branch" 
+  171  git branch 
+  172  git merge testing 
+  173  git branch 
+  174  git logs
+  175  ls
+  176  git logs --oneline --graph 
+  177  ls
+  178  git merge uat
+  179  git logs
+  180  ls
+  181  git logs --oneline --graph 
+  182  git branch 
+  183  git branch -d testing 
+  184  git branch -d uat
+  185  git branch 
+  186  ls
+  187  git logs --oneline --graph 
+  188  history 
+  189  exit 
+  190  ls
+  191  git clone https://github.com/amitvashisttech/devops-m-benz-27-Jan-2022.git
+  192  ls
+  193  cd devops-m-benz-27-Jan-2022/
+  194  ls
+  195  echo "# devops-m-benz-27-Jan-2022" >> README.md
+  196  ls
+  197  git status 
+  198  git init 
+  199  ls
+  200  git status 
+  201  git add . ; git commit -m "First Commit"
+  202  ls
+  203  git status 
+  204  git branch -M main
+  205  git branch 
+  206  git config --list 
+  207  git push -u origin main
+  208  ls
+  209  git config --list 
+  210  ls
+  211  echo "Welcome to the world of GitHub" > Hello.txt
+  212  ls
+  213  git status 
+  214  git add . 
+  215  git add . ; git commit -m "New File Hello.txt"
+  216  ls
+  217  git status 
+  218  git log 
+  219  git push 
+  220  git config --global credential.helper 'cache --timeout=360000'
+  221  git push 
+  222  git status 
+  223  git log --oneline
+  224  ls
+  225  cd ..
+  226  ls
+  227  rm -rf devops-m-benz-27-Jan-2022/
+  228  ls
+  229  git clone https://github.com/amitvashisttech/devops-m-benz-27-Jan-2022.git
+  230  ls
+  231  cd devops-m-benz-27-Jan-2022/
+  232  ls
+  233  git log --oneline
+  234  cat Hello.txt 
+  235  ls
+  236  vim Hello.txt 
+  237  ls
+  238  git commit -am "Second Commit Test" 
+  239  git status 
+  240  git push 
+  241  git status 
+  242  ls
+  243  cat Hello.txt 
+  244  git status 
+  245  git pull 
+  246  ls
+  247  git status 
+  248  ls
+  249  cat Hello.txt 
+  250  ls
+  251  vim Hello.txt 
+  252  git commit -am "Test 4" 
+  253  git log --oneline 
+  254  cat Hello.txt 
+  255  git pull 
+  256  cat Hello.txt 
+  257  vim Hello.txt 
+  258  git status 
+  259  git commit -am "Merge of Test 4 & 5" 
+  260  ls
+  261  git push 
+  262  cat Hello.txt 
+  263  history 
+  264  ls
+  265  mkdir 01-GitHub
+  266  ls
+  267  history > 01-GitHub/History.txt
