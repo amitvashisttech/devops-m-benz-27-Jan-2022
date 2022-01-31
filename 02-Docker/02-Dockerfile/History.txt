@@ -1,0 +1,93 @@
+```
+ 212  mkdir 02-Dockerfile/apache/v1 -p
+  213  ls
+  214  cd 02-Dockerfile/apache/v1/
+  215  ls
+  216  vim Dockerfile
+  217  ls
+  218  docker build -t myapache:v1 -f Dockerfile .
+  219  docker images
+  220  docker run -d --name test-myapache-1 myapache:v1
+  221  docker ps
+  222  docker inspect test-myapache-1
+  223  curl 172.17.0.6
+  224  docker ps
+  225  docker run -d --name test-myapache-2 -P 8082:80 myapache:v1
+  226  docker run -d --name test-myapache-3 -p 8082:80 myapache:v1
+  227  docker ps
+  228  docker images
+  229  docker ps
+  230  docker kill  $(docker ps -aq)
+  231  docker rm  $(docker ps -aq)
+  232  docker ps
+  233  docker run -d --name test-myapache-1  myapache:v1
+  234  docker ps
+  235  ls
+  236  cd ..
+  237  ls
+  238  cp -rf v1 v2
+  239  ls
+  240  cd v2/
+  241  ls
+  242  vim Dockerfile
+  243  ls
+  244  docker build -t myapache:v2 -f Dockerfile .
+  245  docker images
+  246  docker ps
+  247  docker run -d --name test-myapache-2  myapache:v2
+  248  docker ps
+  249  curl 172.17.0.3
+  250  ls
+  251  cd ..
+  252  s
+  253  ls
+  254  cp -rf v2 v3
+  255  ls
+  256  cd v3/
+  257  ls
+  258  mv Dockerfile mydockerfile
+  259  ls
+  260  vim mypage.html
+  261  ls
+  262  vim mydockerfile
+  263  vim ../v2/Dockerfile
+  264  vim mydockerfile
+  265  ls
+  266  docker build -t myapache:v3 .
+  267  ls
+  268  docker build -t myapache:v3 -f mydockerfile .
+  269  docker images
+  270  docker run -d --name test-myapache-3  -P myapache:v3
+  271  docker ps
+  272  ls
+  273  cd ..
+  274  cd
+  275  ls
+  276  cd -
+  277  ls
+  278  cd ../../
+  279  ls
+  280  docker images
+  281  docker login
+  282  docker push myapache:v1
+  283  docker tag 3575ab4207d8 amitvashist7/myapache-benz-31-jan-2022:v1
+  284  docker tag dcac2868e08b amitvashist7/myapache-benz-31-jan-2022:v2
+  285  docker tag 33846eef2d55 amitvashist7/myapache-benz-31-jan-2022:v3
+  286  docker images
+  287  docker push amitvashist7/myapache-benz-31-jan-2022:v1
+  288  docker push amitvashist7/myapache-benz-31-jan-2022:v2
+  289  docker push amitvashist7/myapache-benz-31-jan-2022:v3
+  290  ls
+  291  docker kill  $(docker ps -aq)
+  292  docker rm  $(docker ps -aq)
+  293  docker ps
+  294  docker image
+  295  docker images
+  296  docker images -q
+  297  docker rmi $(docker images -q )
+  298  docker rmi $(docker images -q ) --force
+  299  docker images
+  300  docker run -d --name test-1 -P amitvashist7/myapache-benz-31-jan-2022:v3
+  301  docker ps
+  302  ls
+```
