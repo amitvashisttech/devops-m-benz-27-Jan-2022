@@ -11,7 +11,7 @@ sudo su -
   mkdir 02-Jenkins
   apt-get install default-jdk -y
   java -version
-  wget https://get.jenkins.io/war-stable/2.249.2/jenkins.war
+  wget https://get.jenkins.io/war-stable/2.319.2/jenkins.war
   mv jenkins.war /root/
 ```
 
