@@ -1,6 +1,6 @@
 node {
 
-notify('Started')
+notify('Initiating Job')
     
 try {
 
@@ -74,7 +74,7 @@ stage('Docker Deployment') {
 
 }
 
-	notify('Success')
+	notify('Job has been Completed - Successful')
     }	catch (err) { 
         notify ("Error ${err}")
         currentBuild.result = 'FAILURE'
@@ -88,7 +88,7 @@ stage('Docker Deployment') {
 
 def notify(status){
     emailext (
-      to: "amitvashist7@gmail.com",
+      to: "pastmaster@myjenkins.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
         <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
