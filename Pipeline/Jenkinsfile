@@ -2,7 +2,7 @@ node {
 
 // Get Artifactory Server Instace Details
 def server = Artifactory.server "01"
-def buildinfo =  Artifactory.newBuildInfo()
+def buildInfo =  Artifactory.newBuildInfo()
 
 // Project Path 
 def project_path = "04-App-Code/petclinic-code"
