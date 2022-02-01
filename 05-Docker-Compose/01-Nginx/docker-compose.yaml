@@ -1,0 +1,7 @@
+---
+
+
+nginx: 
+  image: nginx:latest
+  ports:
+    - '8095:80'

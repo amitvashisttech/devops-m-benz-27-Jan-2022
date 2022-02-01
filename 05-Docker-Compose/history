@@ -1,0 +1,65 @@
+225  cd 05-Docker-Compose/
+  226  ls
+  227  ./install.sh
+  228  docker-compose version
+  229  ls
+  230  cd ..
+  231  ls
+  232  docker ps
+  233  ls
+  234  cd 05-Docker-Compose/
+  235  ls
+  236  mkdir 00-Setup
+  237  mkdir 01-Nginx
+  238  ls
+  239  mv install.sh 00-Setup/
+  240  ls
+  241  cd 01-Nginx/
+  242  ls
+  243  vim docker-compose.yaml
+  244  docker run -d --name nginx-2 -p 8091:80 nginx:latest
+  245  docker ps
+  246  docker stop test-1
+  247  docker ps
+  248  docker kill nginx-2
+  249  docker rm nginx-2
+  250  docker run -d --name nginx-2 -p 8092:80 nginx:latest
+  251  docker ps
+  252  docker kill nginx-2
+  253  docker rm nginx-2
+  254  ls
+  255  cat docker-compose.yaml
+  256  docker-compose up -d
+  257  docker-compose ps
+  258  docker ps
+  259  vim docker-compose.yaml
+  260  docker-compose up -d
+  261  docker ps
+  262  docker-compose up -d
+  263  docker-compose --help
+  264  docker-compose stop
+  265  docker-compose rm
+  266  ls
+  267  cd ..
+  268  ls
+  269  cp -rf 01-Nginx 02-Multi-App
+  270  ls
+  271  cd 02-Multi-App/
+  272  ls
+  273  vim docker-compose.yaml
+  274  docker images
+  275  vim docker-compose.yaml
+  276  ls
+  277  docker-compose up -d
+  278  docker ps
+  279  docker images
+  280  docker inspect amitvashist7/mypython-web-app-vmware-17-dec-2021:v4
+  281  ls
+  282  vim docker-compose.yaml
+  283  docker-compose up -d
+  284  docker ps
+  285  ls
+  286  docker-compose halt
+  287  docker-compose kill
+  288  ls
+  289  docker-compose rm

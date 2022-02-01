@@ -1,0 +1,22 @@
+---
+
+
+nginx: 
+  image: nginx:latest
+  ports:
+    - '8090:80'
+
+
+
+
+myapache: 
+  image: amitvashist7/myapache-benz-31-jan-2022:v3
+  ports:
+    - '8091:80'
+
+
+
+mypythonapp: 
+  image: amitvashist7/mypython-web-app-vmware-17-dec-2021:v4
+  ports:
+    - '8092:5000'
