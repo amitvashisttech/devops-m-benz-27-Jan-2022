@@ -1,5 +1,4 @@
 node {
-    // some block
 
 stage('Git CheckOut') {
   git branch: 'main', url: 'https://github.com/amitvashisttech/devops-m-benz-27-Jan-2022.git'
