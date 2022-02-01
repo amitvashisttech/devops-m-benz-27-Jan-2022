@@ -1,6 +1,6 @@
 node {
 
-stage('Git CheckOut') {
+stage('Git - Test - CheckOut') {
   git branch: 'main', url: 'https://github.com/amitvashisttech/devops-m-benz-27-Jan-2022.git'
 } 
 
