@@ -15,5 +15,8 @@ spec:
       - name: docker-get-started
         image: amitvashist7/k8s-tiny-web
         ports:
-        - name: http-port
+        - name: nodejs-port
           containerPort: 80
+      imagePullSecrets:
+      - name: regcred
+

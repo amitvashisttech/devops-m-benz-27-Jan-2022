@@ -1,29 +1,41 @@
+# Docker login
 ```
- 232  mkdir 04-Replication-Cantroller
-  233  cd 04-Replication-Cantroller/
-  234  vim helloworld-rc.yaml
-  235  ls
-  236  kubectl apply -f helloworld-rc.yaml
-  237  cat helloworld-rc.yaml
-  238  kubectl get rc
-  239  kubectl describe rc helloworld-controller
-  240  kubectl delete pod helloworld-controller-x569j helloworld-controller-d8mjc
-  241  kubectl describe rc helloworld-controller
-  242  kubectl get rc
-  243  kubectl scale replicas=1 rc helloworld-controller
-  244  kubectl scale --replicas=1 rc helloworld-controller
-  245  kubectl get rc
-  246  kubectl delete pod helloworld-controller-n9n8k
-  247  kubectl scale --replicas=5 rc helloworld-controller
-  248  kubectl delete pod hello-k8s-2
-  249  ls
-  250  cat helloworld-rc.yaml
-  251  kubectl apply -f helloworld-rc.yaml
-  252  kubectl delete -f helloworld-rc.yaml
+docker login
+ls /root/.docker/config.js
+```
+
+# Create a Secret in K8s for Docker Registry
+```
+kubectl create secret generic regcred --from-file=.dockerconfigjson=/root/.docker/config.json --type=kubernetes.io/dockerconfigjson
+
+kubectl get secrets
+```
+
+# Create Replication Cantroller
+```
+kubectl create -f 04-ReplicationCantroller/helloworld-rc.yaml
+```
+
+# Scale the replicas to 5.
+```
+kubectl scale --replicas=5 rc  helloworld-controller
+```
+
+# Status 
+```
+watch -n .5 kubectl get pods,rc -o wide
+```
 
 ```
 
+NAME                              READY   STATUS    RESTARTS   AGE     IP              NODE       NOMINATED NODE   READINESS GATES
+pod/hello-k8s-2                   1/1     Running   0          3h27m   192.168.30.70   worker02   <none>           <none>
+pod/hello-k8s-3                   1/1     Running   0          172m    192.168.5.6     worker01   <none>           <none>
+pod/helloworld-controller-6kx4q   1/1     Running   0          9m34s   192.168.5.18    worker01   <none>           <none>
+pod/helloworld-controller-ps86v   1/1     Running   0          9m34s   192.168.30.80   worker02   <none>           <none>
 
+NAME                                          DESIRED   CURRENT   READY   AGE     CONTAINERS           IMAGES                      SELECTOR
+replicationcontroller/helloworld-controller   2         2         2       9m34s   docker-get-started   amitvashist7/k8s-tiny-web   app=docker-get-started
 ```
- watch -n .5 kubectl get pods -o wide
-```
+
+
