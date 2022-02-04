@@ -7,6 +7,6 @@ provider "kubernetes" {
 
 provider "kubernetes" {
   config_path    = "/root/.kube/terraform-dev-config"
-  config_context = "terraform-dev"
+  config_context = "amit@kubernetes"
   alias = "terraform-dev"
 }
