@@ -1,6 +1,6 @@
 variable "my_count" {
    description = "Replica Count"
-   default = "1"
+   default = "5"
 }
 
 
@@ -17,7 +17,7 @@ variable "my_target_port" {
 
 variable "my_service_port" {
    description = "default"
-   default = "31001"
+   default = "31007"
 }
 
 
