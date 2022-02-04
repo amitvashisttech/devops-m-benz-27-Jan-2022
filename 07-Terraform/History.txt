@@ -1,0 +1,21 @@
+```
+1032  ./install-terraform.sh
+ 1033  terraform --version
+ 1044  cd 07-Terraform/
+ 1048  cd 01-First-Deployment/
+ 1049  ls
+ 1050  vim main.tf
+ 1051  kubectl config get-contexts
+ 1052  vim main.tf
+ 1053  ls
+ 1054  terraform init
+ 1055  terraform plan
+ 1056  kubectl  get ns
+ 1057  terraform apply
+ 1058  kubectl  get ns
+ 1059  ls -a
+ 1060  cat terraform.tfstate
+ 1061  terraform show
+ 1062  terraform delete
+ 1063  terraform destroy
+```
